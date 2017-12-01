@@ -25,12 +25,12 @@ for ident in led_list: #Cycle through each LED and setup default values
  ledMotion = ident%2 #This will give us alternating 1's and 0's to make effects look better
  ledSpeed = random.randrange(0,5) #Pick a random speed range
 
- randomValueList = [0,0,0,0] #Define the list to hold all the seed speed values
+ randomValueList = [0,0,0,0] #Define the list to hold all the seed brightness values
  randomValueList[0] = (random.randrange(1,25))/100.0 #0.01 through 0.25
  randomValueList[1] = (random.randrange(26,50))/100.0 #0.26 through 0.50
  randomValueList[2] = (random.randrange(51,75))/100.0 #0.51 through 0.75
  randomValueList[3] = (random.randrange(76,99))/100.0 #0.76 through 0.99
- value_group = random.randrange(0,3) #Pick one of the speed vaules to assign LED
+ value_group = random.randrange(0,3) #Pick one of the brightness vaules to assign LED
 
  #Setup the LED dictionary
  led_dict[str(ident)] = {"value":randomValueList[value_group], "motion":ledMotion, "speed":ledSpeed}
